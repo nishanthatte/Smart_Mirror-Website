@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Smart Mirror</title>
+</head>
+<body>
+ <div class="NavBar">
+     <header>
+         <div class="LOGO">
+             <img src="" alt="">
+         </div>
+         <div class="menu">
+             <ul>   
+                 <li><a href="#" class="btn"><span>Home</span></a></li>
+                 <li><a href="#" class="btn"><span>Specs</span></a></li> 
+                 <li><a href="#" class="btn"><span>Contact Us</span></a></li>
+                 <li><a href="#" class="btn"><span>Login</span></a></li> 
+            </ul>
+         </div>
+     </header>
+ </div>
+    <script>
+        const btn = document.querySelector('.btn');
+        btn.onmousemove = function(e){
+            const x =e.pageX - btn.offsetLeft;
+            const y =e.pageY - btn.offsetTop;
+
+            btn.style.setProperty('--x',x+'px');
+            btn.style.setProperty('--y',y+'px');
+        }
+    </script>
+</body>
+</html>
